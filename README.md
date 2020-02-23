@@ -84,7 +84,7 @@ http://localhost:10000/article/1
 
 ## <i class="icon-file"></i> Problems Encountered
 
-### <i class="icon-file"></i>  1
+### <i class="icon-file"></i>  1. Import subfolder
 
 ```
 $ go build
@@ -119,7 +119,7 @@ in DEMO/main.go
 > ```
 
 
-### <i class="icon-file"></i>  2. call function in another package
+### <i class="icon-file"></i>  2. Call function in another package
 
 
 > NOTE: This func must be Exported, <MARK>Capitalized</MARK>, and comment added.
