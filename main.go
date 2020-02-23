@@ -6,16 +6,15 @@ import (
 	"log"
 	"net/http"
 
-	article "github.com/VickyFengYu/go-restful/article"
+	// article "github.com/VickyFengYu/go-restful/article"
+
+	article "./article"
 
 	"github.com/gorilla/mux"
 )
 
 // Article - defined in article package
 type Article = article.Article
-
-// Articles - a global Articles array
-var Articles []Article
 
 func handleRequests() {
 	myRouter := mux.NewRouter().StrictSlash(true)
@@ -28,7 +27,7 @@ func handleRequests() {
 }
 
 func main() {
-	Articles = []Article{
+	article.Articles = []Article{
 		Article{ID: "1", Title: "Article Title 1", Desc: "Article Description 1", Content: "Article Content 1"},
 		Article{ID: "2", Title: "Article Title 2", Desc: "Article Description 2", Content: "Article Content 2"},
 	}

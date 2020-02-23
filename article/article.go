@@ -33,10 +33,10 @@ func ReturnAllArticles(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(Articles) // NewEncoder returns a new encoder that writes to w.
 }
 
-// ReturnSingleArticle - function Return Single Article
+// ReturnSingleArticle - function Return Single Article by id
 func ReturnSingleArticle(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r) // Vars returns the route variables for the current request, if any.
-	fmt.Println("route variables", vars)
+	fmt.Println("Route variables", vars)
 	key := vars["id"]
 
 	for _, article := range Articles {
